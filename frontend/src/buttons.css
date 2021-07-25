@@ -1,0 +1,71 @@
+.btn {
+  outline: "none";
+  padding: 6px 30px;
+  outline: none;
+  font-family: "Montserrat";
+  transition-duration: 0.3s;
+  font-size: 16px;
+}
+
+.btn-blue {
+  background-color: #0066ff;
+  color: white;
+  border: 1px solid #0066ff;
+}
+
+.btn-blue:hover {
+  color: #0066ff;
+  background-color: white;
+}
+.btn-red {
+  background-color: #ff0033;
+  color: white;
+  border: 1px solid #ff0033;
+}
+
+.btn-red:hover {
+  color: #ff0033;
+  background-color: white;
+}
+
+.btn-black-hollow {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.btn-black-hollow:hover {
+  background-color: black;
+  color: White;
+}
+
+.btn-green {
+  background-color: #00cc00;
+  color: white;
+  border: 1px solid #00cc00;
+}
+.btn-green:hover {
+  background-color: white;
+  color: #00cc00;
+}
+
+/* .black-btn {
+  
+  margin-top: 10px;
+  padding: 0 10px;
+  height: 40px;
+  background-color: black;
+  border: none;
+  color: white;
+  font-family: "Montserrat";
+  transition-duration: 0.3s;
+  outline: none;
+} */
+.btn-black {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+}
+.btn-black:hover {
+  background-color: #1da1f2;
+}

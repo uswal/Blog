@@ -1,0 +1,60 @@
+.center-pop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 120;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+}
+
+.center-pop .cross {
+  text-align: right;
+}
+.center-pop .container {
+  width: 600px;
+  padding: 40px;
+  min-height: 200px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center-pop .html {
+  text-align: left;
+}
+
+.center-pop .title {
+  font-weight: 800;
+  font-size: 22px;
+}
+
+.center-pop .cross {
+  position: absolute;
+  right: 40px;
+  font-weight: 800;
+  font-size: 22px;
+  color: grey;
+  transition-duration: 0.3s;
+}
+.center-pop .cross:hover {
+  color: black;
+}
+
+.center-pop .check-label {
+  font-size: 14px;
+  margin-left: 6px;
+  transform: translateY(-2px);
+}
+
+.center-pop .account .col-1 {
+  width: 100px;
+}
+
+.center-pop .account .col-2 {
+  width: calc(100% - 110px);
+  margin-left: 10px;
+}
