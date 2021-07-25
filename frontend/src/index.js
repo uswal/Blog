@@ -12,6 +12,7 @@ import TopNav from "./components/topNav";
 
 import Home from "./pages/home";
 import Article from "./pages/article";
+import CreatePost from "./pages/createPost";
 
 ReactDOM.render(
   <Router>
@@ -19,6 +20,7 @@ ReactDOM.render(
       <TopNav />
       <div className="content">
         <Switch>
+          <Route path="/create-post" component={CreatePost} />
           <Route path="/article" component={Article} />
           <Route path="/" component={Home} />
         </Switch>
