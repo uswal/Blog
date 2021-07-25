@@ -26,7 +26,10 @@ function CreatePost() {
         <label className="small-hdr">Upload Images:</label>
         <input type="file"></input>
       </div>
-
+      <div className="item">
+        <label className="small-hdr">Select category: </label>
+        {/* TODO:  */}
+      </div>
       <div className="item">
         <button className="btn btn-green">SUBMIT</button>
       </div>
