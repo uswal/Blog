@@ -27,8 +27,16 @@ router.route("/upload-image").post((req, res) => {
 });
 
 router.route("/add-thread").post((req, res) => {
-  //do something
-  console.log(req.body);
-  res.json("F");
+  const newPost = new Post(req.body);
+  newPost
+    .save()
+    .then((obj) => {
+      console.log("1 Thread created!");
+      res.json(obj);
+    })
+    .catch((err) => {
+      console.log("Thread creation failed!");
+      res.json(err);
+    });
 });
 module.exports = { router };
