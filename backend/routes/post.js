@@ -39,4 +39,19 @@ router.route("/add-thread").post((req, res) => {
       res.json(err);
     });
 });
+
+router.route("/home-contents").post((req, res) => {
+  Post.find()
+    .sort({ createdAt: -1 })
+    .then((result) => {
+      // console.log(result);
+      res.json(result);
+    });
+});
+
+router.route("/article").post((req, res) => {
+  Post.findOne({ _id: req.body.id }).then((result) => {
+    res.json(result);
+  });
+});
 module.exports = { router };

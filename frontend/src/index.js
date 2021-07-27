@@ -21,7 +21,7 @@ ReactDOM.render(
       <div className="content">
         <Switch>
           <Route path="/create-post" component={CreatePost} />
-          <Route path="/article" component={Article} />
+          <Route path="/article/:id" component={Article} />
           <Route path="/" component={Home} />
         </Switch>
       </div>

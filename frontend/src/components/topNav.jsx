@@ -23,7 +23,7 @@ function TopNav() {
         {context.state.overlayStatus}
         {/* <CenterPop title="ACCOUNT DETAILS" html={<Account />} /> */}
         <div className="item">
-          <Link to="#" className="c-logo ">
+          <Link to="/" className="c-logo ">
             <img className="logo" src="/assets/icons/the_blog.jpg"></img>
           </Link>
         </div>
