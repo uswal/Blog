@@ -3,7 +3,7 @@ import axios from "axios";
 
 import { api } from "../components/config";
 import CommentCard from "../components/commentCard";
-
+import { ago } from "../components/functions";
 import "./css/article.css";
 
 function Article(props) {
@@ -11,6 +11,7 @@ function Article(props) {
   const [author, setAuthor] = useState("");
   const [story, setStory] = useState("");
   const [imgs, setImgs] = useState([]);
+  const [dt, setDt] = useState("");
 
   useEffect(() => {
     //console.log(props.match.params);
@@ -24,13 +25,16 @@ function Article(props) {
         list.push(<img src={addr}></img>);
       });
       setImgs(list);
+      setDt(ago(res.data.createdAt));
     });
   }, []);
 
   return (
     <div className="article">
       <div className="title">{title}</div>
-      <div className="stamps">By {author} | 15 hours ago</div>
+      <div className="stamps">
+        By {author} | {dt}
+      </div>
       <div className="desc">{story}</div>
       {imgs}
       <div className="hr"></div>

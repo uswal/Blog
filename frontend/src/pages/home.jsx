@@ -11,6 +11,7 @@ function Home() {
     axios.post(`${api}/post/home-contents`).then((res) => {
       var list = [];
       res.data.forEach((elem) => {
+        // console.log(elem);
         const img = `${api}/get-image/${elem.images[0]}`;
         list.push(
           <ContentCard
