@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
+import axios from "axios";
 
 import { MyContext } from "./myProvider";
 import Signup from "./signup";
 import { api } from "./config";
-
-import axios from "axios";
+import ForgotPassword from "./forgotPassword";
 
 function Login() {
   const context = useContext(MyContext);
@@ -75,7 +75,14 @@ function Login() {
         >
           Create an account
         </button>
-        <button className="btn btn-black-hollow">Forgot password</button>
+        <button
+          className="btn btn-black-hollow"
+          onClick={() =>
+            context.OPEN_OVERLAY(<ForgotPassword />, "RESET PASSWORD")
+          }
+        >
+          Forgot password
+        </button>
       </div>
     </div>
   );

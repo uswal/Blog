@@ -46,4 +46,16 @@ router.route("/login").post((req, res) => {
     }
   });
 });
+
+router.route("/reset-pass").post((req, res) => {
+  Account.findOne({ email: req.body.email }).then((data) => {
+    if (data.contact === req.body.contact) {
+      const pwd = bcrypt.hashSync(req.body.pass, 10);
+      data.password = pwd;
+      data.markModified("password");
+      data.save();
+      res.json({ status: true });
+    } else res.json({ status: false });
+  });
+});
 module.exports = { router };
