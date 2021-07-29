@@ -1,5 +1,13 @@
-.err-pop {
+.err-pop,
+.err {
   color: red;
+  font-size: 12px;
+  margin: 4px 0;
+  transition-duration: 0.3s;
+}
+
+.msg {
+  color: green;
   font-size: 12px;
   margin: 4px 0;
   transition-duration: 0.3s;

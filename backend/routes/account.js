@@ -58,4 +58,18 @@ router.route("/reset-pass").post((req, res) => {
     } else res.json({ status: false });
   });
 });
+
+router.route("/update-pass").post((req, res) => {
+  Account.findOne({ _id: req.body._id }).then((data) => {
+    if (bcrypt.compareSync(req.body.oldPass, data.password)) {
+      const pwd = bcrypt.hashSync(req.body.newPass, 10);
+      data.password = pwd;
+      data.markModified("password");
+      data.save();
+      res.json({ status: true });
+    } else {
+      res.json({ status: false });
+    }
+  });
+});
 module.exports = { router };

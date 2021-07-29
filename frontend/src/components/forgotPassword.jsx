@@ -1,8 +1,12 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { api } from "./config";
+import { MyContext } from "./myProvider";
+import Login from "./login";
 
 function ForgotPassword() {
+  const context = useContext(MyContext);
+
   const [email, setEmail] = useState("");
   const [contact, setContact] = useState("");
   const [pass, setPass] = useState("");
@@ -84,7 +88,12 @@ function ForgotPassword() {
         >
           RESET
         </button>
-        <button className="btn btn-green">LOGIN</button>
+        <button
+          className="btn btn-green"
+          onClick={() => context.OPEN_OVERLAY(<Login />, "LOGIN")}
+        >
+          LOGIN
+        </button>
       </div>
     </div>
   );

@@ -11,3 +11,9 @@ export function ago(date) {
 
   return strr;
 }
+
+export function isoToString(date) {
+  const d = new Date(date);
+  const strr = d.toString();
+  return strr;
+}
